@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>あなたのオーラ・才能診断結果｜龍斎</title>
+<meta name="description" content="あなたのオーラから読み解いた、オーラカラー・本質・才能・恋愛傾向・魂の覚醒に必要なこと。霊能者・龍斎による無料診断結果。">
+<meta name="robots" content="noindex">
+
+<!-- OGP（URLは公開時に差し替え） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="あなたのオーラ・才能診断結果｜龍斎">
+<meta property="og:description" content="あなたのオーラから読み解く、本質と生まれ持った才能。">
+<meta property="og:url" content="https://example.com/result.html">
+<meta property="og:image" content="https://example.com/assets/main-visual.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- データが無い場合の案内 -->
+<div class="wrap">
+  <div class="notice" id="no-data" style="display:none;">
+    <h2>診断データが見つかりません</h2>
+    <p>結果を表示するには、診断フォームの入力が必要です。
+お手数ですが、もう一度診断ページからお進みください。</p>
+    <a class="btn" href="index.html">診断ページへ戻る</a>
+  </div>
+</div>
+
+<!-- 結果本体 -->
+<main id="result-content">
+
+  <header class="result-header">
+    <div class="wrap">
+      <p class="eyebrow">YOUR AURA &amp; TALENT</p>
+      <h1><span class="uname" id="user-name"></span>さんの診断結果</h1>
+      <p class="sub">あなたのオーラと、生まれ持った才能を読み解きました</p>
+      <p class="concern-note" id="concern-note"></p>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <!-- 1. オーラカラー -->
+    <section class="rcard reveal">
+      <p class="eyebrow">01</p>
+      <h2>あなたのオーラカラー</h2>
+      <div class="aura-stage">
+        <div class="aura-orb" id="aura-orb" aria-hidden="true"></div>
+        <div class="aura-name" id="aura-name"></div>
+      </div>
+      <div id="aura-text"></div>
+    </section>
+
+    <!-- 2. 本質 -->
+    <section class="rcard reveal">
+      <p class="eyebrow">02</p>
+      <h2>あなたの本質</h2>
+      <div id="essence-text"></div>
+    </section>
+
+    <!-- 3. 周囲から見た印象 -->
+    <section class="rcard reveal">
+      <p class="eyebrow">03</p>
+      <h2>周囲から見た印象</h2>
+      <div id="impression-text"></div>
+    </section>
+
+    <!-- 4. 隠れた弱さ -->
+    <section class="rcard reveal">
+      <p class="eyebrow">04</p>
+      <h2>隠れた弱さ</h2>
+      <div id="weakness-text"></div>
+    </section>
+
+    <!-- 5. 生まれ持った才能 -->
+    <section class="rcard reveal">
+      <p class="eyebrow">05</p>
+      <h2>生まれ持った才能</h2>
+      <div class="talents" id="talents"></div>
+    </section>
+
+    <!-- 6. 仕事で活きる才能 -->
+    <section class="rcard reveal">
+      <p class="eyebrow">06</p>
+      <h2>仕事で活きる才能</h2>
+      <div id="work-text"></div>
+    </section>
+
+    <!-- 7. 恋愛で表れる性質 -->
+    <section class="rcard reveal">
+      <p class="eyebrow">07</p>
+      <h2>恋愛で表れる性質</h2>
+      <div id="love-text"></div>
+    </section>
+
+    <!-- 8. 魂の覚醒に必要なこと -->
+    <section class="rcard reveal">
+      <p class="eyebrow">08</p>
+      <h2>魂の覚醒に必要なこと</h2>
+      <div id="awakening-text"></div>
+    </section>
+
+    <!-- 有料鑑定への案内 -->
+    <section class="sales reveal" aria-labelledby="sales-head">
+      <h2 id="sales-head">魂に秘められた力を
+さらに深く知りたい方へ</h2>
+
+      <p>今回の無料診断では、あなたのオーラから読み解いた傾向、本質、才能についてお伝えしました。診断結果の中で、</p>
+
+      <ul class="checks">
+        <li>人の気持ちを感じ取りやすい</li>
+        <li>場の空気に強く影響される</li>
+        <li>直感で選んだことが現実につながる</li>
+        <li>人から相談されることが多い</li>
+        <li>自分には何か特別な感覚がある気がする</li>
+      </ul>
+
+      <p>このような部分が強く当てはまった方は、まだ自覚していない感受性や、霊的な才能を持っている可能性があります。</p>
+
+      <p>ただし、無料診断のオーラから読み取れるのは、本質や感受性、才能の傾向までです。どのような霊能力を持っているのか。現在どの程度目覚めているのか。どの力を伸ばすことで人生に活かせるのか。これらは、一人ひとりの状態を詳しく見なければ分かりません。</p>
+
+      <div class="menu-card">
+        <h3>龍斎の霊能力鑑定</h3>
+        <ul>
+          <li>生まれ持った霊感の強さ</li>
+          <li>あなたの霊能力 上位3つ</li>
+          <li>今後目覚めやすい力</li>
+          <li>感覚が鈍っている原因</li>
+          <li>才能を伸ばすための具体的な方法</li>
+          <li>仕事や人生への活かし方</li>
+        </ul>
+      </div>
+
+      <p>今まで感じてきたことは、単なる気のせいではないかもしれません。自分の中にある力を、曖昧な感覚のまま終わらせたくない方へ。龍斎が、あなたに秘められた力を一つひとつ丁寧に読み解きます。</p>
+
+      <div class="sales__cta">
+        <a class="btn" data-cta href="https://example.com/" target="_blank" rel="noopener">龍斎の霊能力鑑定を見る</a>
+        <span class="micro">※無理な勧誘や、自動課金はありません</span>
+      </div>
+    </section>
+
+    <!-- 操作ボタン -->
+    <div class="actions">
+      <button type="button" class="btn btn--ghost share-btn" id="share-btn">診断結果をシェアする</button>
+      <button type="button" class="btn btn--ghost" id="redo-btn">もう一度診断する</button>
+    </div>
+
+    <!-- 免責 -->
+    <p class="disclaimer">本診断は、数秘術をもとにした娯楽コンテンツです。結果は、これからの自分を考えるヒントとしてお楽しみください。医療・健康・法律など、専門的な判断の代わりとなるものではありません。</p>
+
+  </div>
+</main>
+
+<!-- ページ上部へ戻る -->
+<button type="button" class="to-top" id="to-top" aria-label="ページ上部へ戻る">↑</button>
+
+<!-- 追従CTA -->
+<div class="sticky-cta" id="sticky-cta">
+  <div class="wrap">
+    <a class="btn btn--block" data-cta href="https://example.com/" target="_blank" rel="noopener">龍斎の霊能力鑑定を見る</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">霊能者 龍斎｜オーラ・才能診断</div>
+</footer>
+
+<script src="result.js"></script>
+</body>
+</html>
